@@ -1,0 +1,18 @@
+# MAP RUNSET CALC
+
+
+
+MAP RUNSET\_CALC : 런셋 \* CALC\_ID
+
+* **INPUT**
+  * MAP RUNSET CALC
+  * MST RUNSET
+  *   MST CALC
+
+      * MAP CF GROUP
+      * MST CF GROUP
+
+
+* **OUTPUT**
+  * RST BOX DETAIL
+

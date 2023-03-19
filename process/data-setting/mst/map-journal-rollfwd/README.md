@@ -1,0 +1,16 @@
+# MAP JOURNAL ROLLFWD
+
+* **INPUT**
+  * MAP JOURNAL ROLLFWD
+  * MST ROLLFWD
+  * MST COA
+  *   MST CALC
+
+      * MAP CF GROUP
+      * MST CF GROUP
+
+
+* **OUTPUT**
+  * RST ROLLFWD
+  * ACCT BOX
+
