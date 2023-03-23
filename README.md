@@ -4,3 +4,5 @@ description: GMV의 구조를 설명하고,  IFRS 17의 회계적 요건을 GMV�
 
 # INTRODUCTION
 
+# Second
+
