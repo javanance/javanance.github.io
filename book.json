@@ -1,5 +1,13 @@
 {
-  "plugins" :["hints", "tabs"],
+    "title": "GMV Whitepaper",
+    "author": "GoF",
+    "output.name": "/",
+    "gitbook": "3.2.3",
+    "root": "./",
+    "styles": {
+        "website": "styles/website.css"
+    },  
+	"plugins" :["hints", "tabs2"],
   "pluginsConfig": {
         "hints": {
             "info": "fa fa-info-circle",

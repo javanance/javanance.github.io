@@ -1,0 +1,1522 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>DF · GMV Whitepaper</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Discount Factor에서는 IFRS 17 회계항목 처리에 필요한 할인계수를 생성. (현행 , 직전,  최초, 체계적배분)">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="GoF">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tabs2/tabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="m51-init-rate.html" />
+    
+    
+    <link rel="prev" href="../epv-new-goc.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    INTRODUCTION
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../box/">
+            
+                <a href="../../../box/">
+            
+                    
+                    Box Model
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../../box/epv.html">
+            
+                <a href="../../../box/epv.html">
+            
+                    
+                    Result of Box : CF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../../box/csm.html">
+            
+                <a href="../../../box/csm.html">
+            
+                    
+                    Result of Box : GoC
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">PROCESS</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../job.html">
+            
+                <a href="../../job.html">
+            
+                    
+                    Job
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../new-contract.html">
+            
+                <a href="../../new-contract.html">
+            
+                    
+                    New Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Data setting
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../mst/">
+            
+                <a href="../mst/">
+            
+                    
+                    MST
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1.1" data-path="../mst/mst-goc/">
+            
+                <a href="../mst/mst-goc/">
+            
+                    
+                    MST GOC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1.1.1" data-path="../mst/mst-goc/mst-cont-goc.html">
+            
+                <a href="../mst/mst-goc/mst-cont-goc.html">
+            
+                    
+                    MST CONT GOC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.1.1.2" data-path="../mst/mst-goc/mst-goc.html">
+            
+                <a href="../mst/mst-goc/mst-goc.html">
+            
+                    
+                    MST GOC
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.1.2" data-path="../mst/map-runset-calc/">
+            
+                <a href="../mst/map-runset-calc/">
+            
+                    
+                    MAP RUNSET CALC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1.2.1" data-path="../mst/map-runset-calc/mst-runset.html">
+            
+                <a href="../mst/map-runset-calc/mst-runset.html">
+            
+                    
+                    MST RUNSET
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.1.2.2" data-path="../mst/map-runset-calc/mst-calc.html">
+            
+                <a href="../mst/map-runset-calc/mst-calc.html">
+            
+                    
+                    MST CALC
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.1.3" data-path="../mst/map-journal-rollfwd/">
+            
+                <a href="../mst/map-journal-rollfwd/">
+            
+                    
+                    MAP JOURNAL ROLLFWD
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1.3.1" data-path="../mst/map-journal-rollfwd/mst-rollfwd.html">
+            
+                <a href="../mst/map-journal-rollfwd/mst-rollfwd.html">
+            
+                    
+                    MST ROLLFWD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.1.3.2" data-path="../mst/map-journal-rollfwd/mst-calc.html">
+            
+                <a href="../mst/map-journal-rollfwd/mst-calc.html">
+            
+                    
+                    MST CALC
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../cf/">
+            
+                <a href="../cf/">
+            
+                    
+                    CF
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.2.1" data-path="../cf/current-cf.html">
+            
+                <a href="../cf/current-cf.html">
+            
+                    
+                    M23 : Current CF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.2" data-path="../cf/m24-movement-cf.html">
+            
+                <a href="../cf/m24-movement-cf.html">
+            
+                    
+                    M24 : Movement CF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.3" data-path="../cf/prev-cf.html">
+            
+                <a href="../cf/prev-cf.html">
+            
+                    
+                    M25~M28 : Previous CF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2.4" data-path="../cf/real-cf.html">
+            
+                <a href="../cf/real-cf.html">
+            
+                    
+                    M21 : Real CF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../epv-new-goc.html">
+            
+                <a href="../epv-new-goc.html">
+            
+                    
+                    EPV NEW GOC : M35
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    DF
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.4.1" data-path="m51-init-rate.html">
+            
+                <a href="m51-init-rate.html">
+            
+                    
+                    M51 : Init rate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4.2" data-path="csm.html">
+            
+                <a href="csm.html">
+            
+                    
+                    CSM 부리이율 : Weight Rate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4.3" data-path="m53-weighted-init-rate-his.html">
+            
+                <a href="m53-weighted-init-rate-his.html">
+            
+                    
+                    M53 : Weighted init rate his
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4.4" data-path="m54-weighted-rate-history-for-missing.html">
+            
+                <a href="m54-weighted-rate-history-for-missing.html">
+            
+                    
+                    M54 : Weighted Rate history for missing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4.5" data-path="m57-weighted-init-rate.html">
+            
+                <a href="m57-weighted-init-rate.html">
+            
+                    
+                    M57 : Weighted init rate Determind
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4.6" data-path="m58-weighted-rate-for-missing.html">
+            
+                <a href="m58-weighted-rate-for-missing.html">
+            
+                    
+                    M58 : Weighted rate for missing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4.7" data-path="m55-newgoc-eir.html">
+            
+                <a href="m55-newgoc-eir.html">
+            
+                    
+                    M55 : NewGoc EIR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4.8" data-path="m56-goc-eir.html">
+            
+                <a href="m56-goc-eir.html">
+            
+                    
+                    M56 : GoC EIR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4.9" data-path="m59-df-flat.html">
+            
+                <a href="m59-df-flat.html">
+            
+                    
+                    M59 : DF Flat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="../ra-and-tvog/">
+            
+                <a href="../ra-and-tvog/">
+            
+                    
+                    TVOG & RA
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.5.1" data-path="../ra-and-tvog/m31-tvog-lv1.html">
+            
+                <a href="../ra-and-tvog/m31-tvog-lv1.html">
+            
+                    
+                    M31 : TVOG lv1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5.2" data-path="../ra-and-tvog/m32-ra-lv1.html">
+            
+                <a href="../ra-and-tvog/m32-ra-lv1.html">
+            
+                    
+                    M32 : RA lv1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5.3" data-path="../ra-and-tvog/m33-tvog-lv2-delta.html">
+            
+                <a href="../ra-and-tvog/m33-tvog-lv2-delta.html">
+            
+                    
+                    M33 : TVOG lv2 delta
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5.4" data-path="../ra-and-tvog/m34-ra-lv2-delta.html">
+            
+                <a href="../ra-and-tvog/m34-ra-lv2-delta.html">
+            
+                    
+                    M34 : RA lv2 delta
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.6" data-path="../ratio/">
+            
+                <a href="../ratio/">
+            
+                    
+                    RATIO
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.6.1" data-path="../ratio/m36-dac-release-ratio.html">
+            
+                <a href="../ratio/m36-dac-release-ratio.html">
+            
+                    
+                    M36 : DAC release ratio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.6.2" data-path="../ratio/m39-csm-release-ratio.html">
+            
+                <a href="../ratio/m39-csm-release-ratio.html">
+            
+                    
+                    M39 : CSM release ratio
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../box-result/">
+            
+                <a href="../../box-result/">
+            
+                    
+                    Box Result
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../../box-result/m71-rst-box-cf-detail.html">
+            
+                <a href="../../box-result/m71-rst-box-cf-detail.html">
+            
+                    
+                    M71 : RST BOX DETAIL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../../box-result/m75-rst-box-cf-group.html">
+            
+                <a href="../../box-result/m75-rst-box-cf-group.html">
+            
+                    
+                    M75 : RST BOX GROUP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../../box-result/m72-rst-box-ra.html">
+            
+                <a href="../../box-result/m72-rst-box-ra.html">
+            
+                    
+                    M72 : RST BOX RA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="../../box-result/m73-rst-box-tvog.html">
+            
+                <a href="../../box-result/m73-rst-box-tvog.html">
+            
+                    
+                    M73 : RST BOX TVOG
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5" data-path="../../box-result/m81-loss-step.html">
+            
+                <a href="../../box-result/m81-loss-step.html">
+            
+                    
+                    M81 : LOSS STEP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.6" data-path="../../box-result/m82-rst-csm.html">
+            
+                <a href="../../box-result/m82-rst-csm.html">
+            
+                    
+                    M82 : RST BOX CSM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.7" data-path="../../box-result/m86-rst-dac.html">
+            
+                <a href="../../box-result/m86-rst-dac.html">
+            
+                    
+                    M86 : RST BOX DAC
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../result/">
+            
+                <a href="../../result/">
+            
+                    
+                    Account Result
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="../../result/m94.html">
+            
+                <a href="../../result/m94.html">
+            
+                    
+                    M94 : RST ROLL FWD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Issues and Topics</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../../issues-and-topics-related-ifrs17/recognition.html">
+            
+                <a href="../../../issues-and-topics-related-ifrs17/recognition.html">
+            
+                    
+                    Recognition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../../issues-and-topics-related-ifrs17/derecognition/">
+            
+                <a href="../../../issues-and-topics-related-ifrs17/derecognition/">
+            
+                    
+                    Derecognition
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../../../issues-and-topics-related-ifrs17/derecognition/undefined.html">
+            
+                <a href="../../../issues-and-topics-related-ifrs17/derecognition/undefined.html">
+            
+                    
+                    기준서
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../../../issues-and-topics-related-ifrs17/derecognition/untitled.html">
+            
+                <a href="../../../issues-and-topics-related-ifrs17/derecognition/untitled.html">
+            
+                    
+                    제거시 처리사항
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../../issues-and-topics-related-ifrs17/loss-component/">
+            
+                <a href="../../../issues-and-topics-related-ifrs17/loss-component/">
+            
+                    
+                    Loss Component
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../../../issues-and-topics-related-ifrs17/loss-component/undefined.html">
+            
+                <a href="../../../issues-and-topics-related-ifrs17/loss-component/undefined.html">
+            
+                    
+                    기준서
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../../../issues-and-topics-related-ifrs17/loss-component/undefined-1.html">
+            
+                <a href="../../../issues-and-topics-related-ifrs17/loss-component/undefined-1.html">
+            
+                    
+                    손실요소 처리사항
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../../issues-and-topics-related-ifrs17/dac/">
+            
+                <a href="../../../issues-and-topics-related-ifrs17/dac/">
+            
+                    
+                    DAC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../../../issues-and-topics-related-ifrs17/dac/undefined.html">
+            
+                <a href="../../../issues-and-topics-related-ifrs17/dac/undefined.html">
+            
+                    
+                    기준서
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">DATA</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../../data/data.html">
+            
+                <a href="../../../data/data.html">
+            
+                    
+                    Data Mart 개요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../../data/input-data/">
+            
+                <a href="../../../data/input-data/">
+            
+                    
+                    Input Data
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../../data/input-data/raw.html">
+            
+                <a href="../../../data/input-data/raw.html">
+            
+                    
+                    Raw
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../../../data/input-data/cf.html">
+            
+                <a href="../../../data/input-data/cf.html">
+            
+                    
+                    CF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../../../data/input-data/df.html">
+            
+                <a href="../../../data/input-data/df.html">
+            
+                    
+                    DF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../../../data/input-data/tvog-ra.html">
+            
+                <a href="../../../data/input-data/tvog-ra.html">
+            
+                    
+                    TVOG, RA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../../../data/input-data/ratio.html">
+            
+                <a href="../../../data/input-data/ratio.html">
+            
+                    
+                    Ratio
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../../data/output-date/">
+            
+                <a href="../../../data/output-date/">
+            
+                    
+                    Output Data
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../../../data/output-date/box-result.html">
+            
+                <a href="../../../data/output-date/box-result.html">
+            
+                    
+                    Box result
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="../../../data/output-date/account-result.html">
+            
+                <a href="../../../data/output-date/account-result.html">
+            
+                    
+                    Account result
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../../../data/master-setting/">
+            
+                <a href="../../../data/master-setting/">
+            
+                    
+                    Master setting
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../../../data/master-setting/map.html">
+            
+                <a href="../../../data/master-setting/map.html">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="../../../data/master-setting/master.html">
+            
+                <a href="../../../data/master-setting/master.html">
+            
+                    
+                    Master
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../../../data/code.html">
+            
+                <a href="../../../data/code.html">
+            
+                    
+                    Code : ENUMs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">PATTERN</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../../pattern/interface.html">
+            
+                <a href="../../../pattern/interface.html">
+            
+                    
+                    Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../../pattern/dao.html">
+            
+                <a href="../../../pattern/dao.html">
+            
+                    
+                    DAO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../../../pattern/provider.html">
+            
+                <a href="../../../pattern/provider.html">
+            
+                    
+                    Provider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../../../pattern/bulid.html">
+            
+                <a href="../../../pattern/bulid.html">
+            
+                    
+                    Bulid
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">CONFIGURATION</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../../configuration/infra.html">
+            
+                <a href="../../../configuration/infra.html">
+            
+                    
+                    Infra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../../configuration/util.html">
+            
+                <a href="../../../configuration/util.html">
+            
+                    
+                    Util
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../../configuration/properties.html">
+            
+                <a href="../../../configuration/properties.html">
+            
+                    
+                    Properties
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../../configuration/run-arguements.html">
+            
+                <a href="../../../configuration/run-arguements.html">
+            
+                    
+                    Run arguements
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >DF</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="df">DF</h1>
+<p>GoC(PF)&#xBCC4; / oci&#xC815;&#xCC45; / &#xD68C;&#xACC4;&#xBAA8;&#xD615; </p>
+<ul>
+<li>[ ] &#xCD5C;&#xCD08;&#xD560;&#xC778;&#xC728; option (GoC &#xCD5C;&#xCD08;&#xC778;&#xC2DD;&#xC77C;&#xC758; &#xD560;&#xC778;&#xC728;&#xC0AC;&#xC6A9; , &#xAC00;&#xC911;&#xD3C9;&#xADE0;&#xD558;&#xC5EC; &#xC0AC;&#xC6A9; )</li>
+<li>[ ] GoC &#xCD5C;&#xCD08; &#xD560;&#xC778;&#xC728; (&#xAC00;&#xC911;&#xD3C9;&#xADE0;) , open cohort &#xC2E0;&#xADDC;&#xBB3C;&#xB7C9; &#xAC00;&#xC911;&#xCE58; &#xAE30;&#xC900; </li>
+<li>[ ] GoC &#xCD5C;&#xCD08; &#xD560;&#xC778;&#xC728; (&#xAC00;&#xC911;&#xD3C9;&#xADE0;) history&#xAD00;&#xB9AC;&#xCCB4;&#xACC4;</li>
+<li>[ ] option &#xAE08;&#xB9AC;&#xAC1C;&#xC815;&#xC8FC;&#xAE30; (&#xC9C1;&#xC804; &#xACB0;&#xC0B0; vs &#xB9E4;&#xB2EC;)</li>
+<li>[ ] &#xD68C;&#xACC4;&#xBAA8;&#xD615;&#xC5D0; &#xB530;&#xB978; &#xCCB4;&#xACC4;&#xC801;&#xBC30;&#xBD84;&#xC728; (Non-par / In-par) : &#xCD5C;&#xCD08;&#xC778;&#xC2DD;&#xC2DC;&#xC810;&#xC758; &#xAE30;&#xCD08;&#xC790;&#xC0B0;&#xBB34;&#xAD00; &#xBA85;&#xBAA9; / &#xB2E8;&#xC77C;&#xC728;</li>
+<li>[ ] In-par &#xCCB4;&#xACC4;&#xC801;&#xBC30;&#xBD84;&#xC728;(&#xB2E8;&#xC77C;&#xB960;;EIR) &#xC0B0;&#xCD9C;&#xB85C;&#xC9C1; : Option EIR-SL(Start-Lockin) &#xC870;&#xC815;&#xBD84;&#xC744; OCI&#xB85C; &#xCC98;&#xB9AC;&#xD558;&#xB294; &#xACBD;&#xC6B0; vs PL&#xB85C; &#xCC98;&#xB9AC;&#xD558;&#xB294; &#xACBD;&#xC6B0; </li>
+</ul>
+<h2 id="class">class</h2>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><ul>
+<li>SetupDfCurrRate</li>
+<li>SetupDfInitRate</li>
+<li>SetupDfWgtRate</li>
+<li>SetupDfEir</li>
+<li>SetupDfLv3Flat</li>
+</ul>
+</div></div></p>
+<h2 id="job">job</h2>
+<table>
+<thead>
+<tr>
+<th>JOB</th>
+<th>JOB_DESC</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M51</td>
+<td>Init Rate</td>
+<td>SetupDfInitRate.createNew())</td>
+</tr>
+<tr>
+<td>M52</td>
+<td>Init Rate All for missing</td>
+<td>SetupDfInitRate.createAll())</td>
+</tr>
+<tr>
+<td>M53</td>
+<td>Wghted Rate His</td>
+<td>SetupDfWgtRate.createNew(),</td>
+</tr>
+<tr>
+<td>M54</td>
+<td>Wghted His for missing</td>
+<td>SetupDfWgtRate.createAll())</td>
+</tr>
+<tr>
+<td>M55</td>
+<td>NewGoc EIR</td>
+<td>SetupDfEir.createNewgoc(),</td>
+</tr>
+<tr>
+<td>M56</td>
+<td>Curr EIR</td>
+<td>SetupDfEir.create(),</td>
+</tr>
+<tr>
+<td>M57</td>
+<td>Wghted Rate Determined</td>
+<td>SetupDfWgtRate.determineNew())</td>
+</tr>
+<tr>
+<td>M58</td>
+<td>Wghted Rate for missing</td>
+<td>SetupDfWgtRate.determineAll())</td>
+</tr>
+<tr>
+<td>M59</td>
+<td>Goc Int Flat</td>
+<td>SetupDfLv3Flat.create(),</td>
+</tr>
+</tbody>
+</table>
+<h2 id="table">table</h2>
+<p><div class="alert alert-undefined hints-alert"><div class="hints-icon"><i class="undefined"></i></div><div class="hints-container"><ul>
+<li>DfLv1CurrRate</li>
+<li>DfLv2Eir</li>
+<li>DfLv2EirNewgoc</li>
+<li>DfLv2InitRate</li>
+<li>DfLv2WghtHis</li>
+<li>DfLv2WghtRate</li>
+<li>DfLv3Flat</li>
+</ul>
+</div></div></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../epv-new-goc.html" class="navigation navigation-prev " aria-label="Previous page: EPV NEW GOC : M35">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="m51-init-rate.html" class="navigation navigation-next " aria-label="Next page: M51 : Init rate">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"Discount Factor에서는 IFRS 17 회계항목 처리에 필요한 할인계수를 생성. (현행 , 직전,  최초, 체계적배분)","title":"DF","level":"2.3.4","depth":2,"next":{"title":"M51 : Init rate","level":"2.3.4.1","depth":3,"path":"process/data-setting/df/m51-init-rate.md","ref":"process/data-setting/df/m51-init-rate.md","articles":[]},"previous":{"title":"EPV NEW GOC : M35","level":"2.3.3","depth":2,"path":"process/data-setting/epv-new-goc.md","ref":"process/data-setting/epv-new-goc.md","articles":[]},"dir":"ltr"},"config":{"plugins":["hints","tabs2"],"root":"./","styles":{"website":"styles/website.css"},"pluginsConfig":{"hints":{"danger":"fa fa-exclamation-cicle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"tabs2":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"GoF","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GMV Whitepaper","output.name":"/","gitbook":"3.2.3"},"file":{"path":"process/data-setting/df/README.md","mtime":"2023-03-24T17:28:46.778Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-03-24T17:38:22.579Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-tabs2/tabs.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
