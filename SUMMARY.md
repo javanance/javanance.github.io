@@ -93,3 +93,11 @@
 * [Properties](configuration/properties.md)
 * [Run arguements](configuration/run-arguements.md)
 
+
+## Reference Sites
+* [Gofsolution](https://www.gofsolution.com)
+* [Blogs](https://blog.gofsolution.com)
+* [App](https://ifrs17.gofsolution.com)
+* [Archives](archives.md)
+* [GMV](https://www.gactuary.com/gmvbook)
+
