@@ -7,13 +7,22 @@
     "styles": {
         "website": "styles/website.css"
     },  
-	"plugins" :["hints", "tabs2"],
+	"plugins" :["hints", "tabs2", "adsense"],
   "pluginsConfig": {
         "hints": {
             "info": "fa fa-info-circle",
             "tip": "fa fa-mortar-board",
             "danger": "fa fa-exclamation-cicle",
             "working": "fa fa-wrench"
-        }
+        }	,
+	"adsense": 
+            {
+            "client": "ca-pub-8554876304940585",
+            "slot": "2823048773",
+            "format": "auto",
+            "location": ".page-inner section",
+            "style": "width: 100px;"
+            }
+        	
     }
 }
